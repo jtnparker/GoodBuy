@@ -1,0 +1,25 @@
+{   
+    "manifest_version": 2,
+    "short_name": "GoodBuy",
+    "name": "GoodBuy",
+    "description": "GoodBuy's MVP",
+    "version": "0.1",
+    "browser_action": {
+          "default_popup": "./index.html"
+        },
+   
+    "content_scripts": [{
+        "js": [ "./content.js"],
+        "matches": [ "https://www.amazon.com/s?k=*"]
+       }],
+      "background": {
+        "scripts": ["./background.js"]
+       },
+    "permissions": [
+        "activeTab", "contextMenus", "tabs", "webNavigation"
+    ],
+    "web_accessible_resources" : ["*.html"],
+    
+    "author": "Jonathan Parker"
+}
+
