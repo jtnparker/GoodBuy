@@ -4,3 +4,5 @@ config.json
 ./db/productTable.csv
 ./db/products.csv
 ./server/config.json
+./client/dist.crx
+./client/dist.pem

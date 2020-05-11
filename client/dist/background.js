@@ -2,7 +2,7 @@ let productList = [];
 
 let getProductList = () => {
     const xhr = new XMLHttpRequest();
-    let apiCall = "http://localhost:3000/api";
+    let apiCall = "http://54.177.135.25:443/api";
     xhr.open("GET", apiCall, true);
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
