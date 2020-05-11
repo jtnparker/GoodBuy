@@ -3,3 +3,4 @@ config.json
 ./db/products.csv
 ./db/productTable.csv
 ./db/products.csv
+./server/config.json

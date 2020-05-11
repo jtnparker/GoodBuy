@@ -2,7 +2,7 @@ const express = require('express');
 
 const path = require('path');
 const router = require('./router');
-const cors = require('cors');
+var cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 

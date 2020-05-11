@@ -89,7 +89,7 @@ componentDidMount() {
   
 getList() {
   axios
-  .get('http://localhost:3000/api')
+  .get('http://54.176.64.219:3000/api')
   .then((data) => {
     let productCategoryNames = [];
     for (var i = 0; i < data.data.length; i++) {
@@ -128,7 +128,7 @@ matchProduct() {
 
 getProduct(productID) {
   axios
-  .get(`http://localhost:3000/api/${productID}`) 
+  .get(`http://54.176.64.219:3000/api/${productID}`) 
   .then((data) => {
     let productNames = [];
     if (this.state.hrcToggle ===true && this.state.petaToggle ===true && this.state.fairtradeToggle ===true) {
@@ -189,7 +189,7 @@ getProduct(productID) {
 }
 getPreferences() {
   axios
-  .get(`http://localhost:3000/api/pref/1`) 
+  .get(`http://54.176.64.219:3000/api/pref/1`) 
   .then((data) => {
       this.setState({
         hrcToggle: data.data[0].hrc,
@@ -206,7 +206,7 @@ updatePreferences(hrc, peta, fairtrade) {
     fairtrade: fairtrade
   }
   axios
-  .put(`http://localhost:3000/api/pref/1`, update)
+  .put(`http://54.176.64.219:3000/api/pref/1`, update)
   .then(() => {
     this.getPreferences()
   })
