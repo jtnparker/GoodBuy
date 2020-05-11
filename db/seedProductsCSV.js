@@ -3,7 +3,7 @@ const fs = require('fs');
 const writeUsers = fs.createWriteStream('productTable.csv');
 const _ = require('lodash');
 // const allPhotos = require('./photos');
-writeUsers.write('id | productID | name | company | brand | fairtrade | peta | hrc | avgscore | photo | link\n', 'utf8');
+writeUsers.write('id, productID, name, company, brand, link, peta, fairtrade, hrc, avgscore\n', 'utf8');
 function writeTenMillionUsers(writer, encoding, callback) {
     let i = 20;
     let id = 0;

@@ -16,8 +16,7 @@ const pw = config.pw
 const db = config.db
 const port = config.port
 const conString = `postgres://${user}:${pw}@${host}:${port}/${db}`
-const tableCreateModel = 'CREATE TABLE IF NOT EXISTS testtable(lastname varchar(15) NOT null, firstname varchar(15) NOT null, age integer NOT null, gender varchar(3) NOT null)';
-const tableCreate = 'CREATE TABLE IF NOT EXISTS productTable(id integer NOT null, productid integer NOT null, name text NOT null, company text NOT null, brand text NOT null, fairtrade integer NOT null, peta integer NOT null, hrc integer NOT null, avgscore integer NOT null, photo text NOT null, link text NOT null)'
+const tableCreate = 'CREATE TABLE IF NOT EXISTS productTable(id integer NOT null, productid integer NOT null, name text NOT null, brand text NOT null, company text NOT null, link text NOT null, peta integer NOT null, fairtrade integer NOT null, hrc integer NOT null, avgscore integer NOT null)'
 // Connecting to Database
 const client = new Client({
     connectionString: conString,

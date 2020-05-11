@@ -116,8 +116,13 @@ matchProduct() {
       if (this.state.productList[i] === this.state.urlWords[j]) {
          this.getProduct(i+1);
        }
+       else if (this.state.productList[i].includes(this.state.urlWords[j])) {
+        if (this.state.productList[i] === this.state.urlWords[j] + this.state.urlWords[j+1]) {
+          this.getProduct(i+1);
     }
   }
+  }
+}
 
 }
 

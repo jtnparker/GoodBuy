@@ -1,2 +1,5 @@
 node_modules
 config.json
+./db/products.csv
+./db/productTable.csv
+./db/products.csv

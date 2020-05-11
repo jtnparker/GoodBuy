@@ -35,10 +35,18 @@ chrome.webNavigation.onCompleted.addListener(tab => {
                 chrome.tabs.query({active: true, currentWindow: true}, tabs => {
                     chrome.tabs.sendMessage(tabs[0].id, {type: 'goodBuySearch'});
                 });
-                 
                 
                }
-            }
+               else if (productList[i].includes(urlWords[j])) {
+                 if (productList[i] === urlWords[j] + urlWords[j+1]) {
+                  chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+                    chrome.tabs.sendMessage(tabs[0].id, {type: 'goodBuySearch'});
+                });
+
+                 }
+               }
+        
+           }
           }
 
 
